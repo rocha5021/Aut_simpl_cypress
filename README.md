@@ -49,6 +49,7 @@ npm install
 
 Execução dos Testes
 
+
 npx cypress open      # Abre a interface interativa do Cypress
 npx cypress run       # Executa os testes em modo headless
 
