@@ -1,0 +1,124 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-05-09T13:51:54.900Z",
+    "end": "2025-05-09T13:52:03.542Z",
+    "duration": 8642,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "ae5f848e-3db4-4290-a3b7-7260a51fc55f",
+      "title": "",
+      "fullFile": "cypress\\e2e\\1-login.cy.js",
+      "file": "cypress\\e2e\\1-login.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "099121f1-60dc-4394-bf1a-bdba3c0dbacf",
+          "title": "Login no OrangeHRM",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Deve realizar login com sucesso",
+              "fullTitle": "Login no OrangeHRM Deve realizar login com sucesso",
+              "timedOut": null,
+              "duration": 3487,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('input[name=\"username\"]').type('Admin');\ncy.get('input[name=\"password\"]').type('admin123');\ncy.get('button[type=\"submit\"]').click();\ncy.url().should('include', '/dashboard');\ncy.get('h6').should('contain', 'Dashboard');",
+              "err": {},
+              "uuid": "ada0e722-dca4-4d96-9735-7a600455ce44",
+              "parentUUID": "099121f1-60dc-4394-bf1a-bdba3c0dbacf",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Deve mostrar erro com credenciais inválidas",
+              "fullTitle": "Login no OrangeHRM Deve mostrar erro com credenciais inválidas",
+              "timedOut": null,
+              "duration": 2633,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('input[name=\"username\"]').type('usuario_invalido');\ncy.get('input[name=\"password\"]').type('senha_errada');\ncy.get('button[type=\"submit\"]').click();\ncy.get('.oxd-alert-content-text').should('contain', 'Invalid credentials');",
+              "err": {},
+              "uuid": "c870b5c9-0688-42b7-86c1-ab34b25bb52a",
+              "parentUUID": "099121f1-60dc-4394-bf1a-bdba3c0dbacf",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "ada0e722-dca4-4d96-9735-7a600455ce44",
+            "c870b5c9-0688-42b7-86c1-ab34b25bb52a"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 6120,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

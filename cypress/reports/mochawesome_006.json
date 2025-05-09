@@ -1,0 +1,175 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 4,
+    "passes": 1,
+    "pending": 0,
+    "failures": 3,
+    "start": "2025-05-09T13:52:30.070Z",
+    "end": "2025-05-09T13:53:04.395Z",
+    "duration": 34325,
+    "testsRegistered": 4,
+    "passPercent": 25,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "fd36e7b7-da40-4c7f-98ed-0485c1336e31",
+      "title": "",
+      "fullFile": "cypress\\e2e\\4-criar-excluir-usuario.cy.js",
+      "file": "cypress\\e2e\\4-criar-excluir-usuario.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "1b1f69b3-182d-462a-9a3e-edd7c558303c",
+          "title": "Testes para Criar e Excluir Usuário - OrangeHRM",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Deve criar um novo usuário com sucesso",
+              "fullTitle": "Testes para Criar e Excluir Usuário - OrangeHRM Deve criar um novo usuário com sucesso",
+              "timedOut": null,
+              "duration": 9554,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('span').contains('Admin').should('be.visible').click();\ncy.contains('Add').should('be.visible').click();\ncy.get('input[placeholder=\"Type for hints...\"]').type('Paul');\ncy.get('div[role=\"listbox\"] > div').should('exist').first().click();\ncy.get('div[role=\"listbox\"]').eq(1).contains('Admin').should('be.visible').click();\ncy.get('input[autocomplete=\"off\"]').eq(1).type('usuario.teste');\ncy.get('input[type=\"password\"]').eq(0).type('senha123');\ncy.get('input[type=\"password\"]').eq(1).type('senha123');\ncy.contains('Save').should('be.visible').click();\ncy.get('.oxd-toast').should('contain', 'Success');",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `div[role=\"listbox\"]`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `div[role=\"listbox\"]`, but never found it.\n    at Context.eval (webpack://aut_1/./cypress/e2e/4-criar-excluir-usuario.cy.js:20:7)",
+                "diff": null
+              },
+              "uuid": "098803c0-b8e1-4d8e-b3cd-72ef4de5b919",
+              "parentUUID": "1b1f69b3-182d-462a-9a3e-edd7c558303c",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Deve excluir um usuário com sucesso",
+              "fullTitle": "Testes para Criar e Excluir Usuário - OrangeHRM Deve excluir um usuário com sucesso",
+              "timedOut": null,
+              "duration": 9072,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('span').contains('Admin').should('be.visible').click();\ncy.get('.oxd-input').eq(1).type('usuario.teste');\ncy.contains('Search').should('be.visible').click();\ncy.get('.oxd-table-row .oxd-icon-button').should('exist').eq(1).click();\ncy.contains('Yes, Delete').should('be.visible').click();\ncy.get('.oxd-toast').should('contain', 'Success');",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find content: 'Yes, Delete' but never did.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find content: 'Yes, Delete' but never did.\n    at Context.eval (webpack://aut_1/./cypress/e2e/4-criar-excluir-usuario.cy.js:35:31)",
+                "diff": null
+              },
+              "uuid": "374678ea-05fe-4068-9ad4-9badf238be0b",
+              "parentUUID": "1b1f69b3-182d-462a-9a3e-edd7c558303c",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Deve lidar com erro ao criar usuário quando elemento está ausente",
+              "fullTitle": "Testes para Criar e Excluir Usuário - OrangeHRM Deve lidar com erro ao criar usuário quando elemento está ausente",
+              "timedOut": null,
+              "duration": 9209,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('span').contains('Admin').should('be.visible').click();\ncy.contains('Add').should('be.visible').click();\ncy.get('input[placeholder=\"Type for hints...\"]').type('Paul');\ncy.get('div[role=\"listbox\"] > div').should('not.exist'); // Simula ausência do elemento\ncy.contains('Save').should('be.visible').click();\ncy.get('.oxd-toast').should('not.contain', 'Success'); // Verifica que não houve sucesso",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected <div.oxd-autocomplete-option> not to exist in the DOM, but it was continuously found.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected <div.oxd-autocomplete-option> not to exist in the DOM, but it was continuously found.\n    at Context.eval (webpack://aut_1/./cypress/e2e/4-criar-excluir-usuario.cy.js:45:40)",
+                "diff": null
+              },
+              "uuid": "6c31b92f-de69-4010-88ea-f2d7c4f3f29e",
+              "parentUUID": "1b1f69b3-182d-462a-9a3e-edd7c558303c",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Deve lidar com erro ao excluir usuário quando elemento está ausente",
+              "fullTitle": "Testes para Criar e Excluir Usuário - OrangeHRM Deve lidar com erro ao excluir usuário quando elemento está ausente",
+              "timedOut": null,
+              "duration": 4580,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('span').contains('Admin').should('be.visible').click();\ncy.get('.oxd-input').eq(1).type('usuario.inexistente');\ncy.contains('Search').should('be.visible').click();\ncy.get('.oxd-table-row .oxd-icon-button').should('not.exist'); // Simula ausência do botão\ncy.contains('Yes, Delete').should('not.exist'); // Verifica que o botão de exclusão não aparece",
+              "err": {},
+              "uuid": "69cebecf-5e24-470a-9a7b-85b78e1fab9a",
+              "parentUUID": "1b1f69b3-182d-462a-9a3e-edd7c558303c",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "69cebecf-5e24-470a-9a7b-85b78e1fab9a"
+          ],
+          "failures": [
+            "098803c0-b8e1-4d8e-b3cd-72ef4de5b919",
+            "374678ea-05fe-4068-9ad4-9badf238be0b",
+            "6c31b92f-de69-4010-88ea-f2d7c4f3f29e"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 32415,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
