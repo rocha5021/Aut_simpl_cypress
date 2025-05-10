@@ -1,0 +1,106 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-05-10T17:26:56.875Z",
+    "end": "2025-05-10T17:27:03.091Z",
+    "duration": 6216,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "abe5ca0f-9031-4c00-b150-49068b9cafcf",
+      "title": "",
+      "fullFile": "cypress\\e2e\\3-validar-lista-usuarios.cy.js",
+      "file": "cypress\\e2e\\3-validar-lista-usuarios.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "21504336-5abb-4462-a5be-379d13b9d0f3",
+          "title": "Validação da lista de usuários - OrangeHRM",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Deve acessar Admin > User Management e validar lista de usuários",
+              "fullTitle": "Validação da lista de usuários - OrangeHRM Deve acessar Admin > User Management e validar lista de usuários",
+              "timedOut": null,
+              "duration": 6159,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('span').contains('Admin').click();\ncy.url().should('include', 'admin/viewSystemUsers');\ncy.get('.oxd-table-body').should('exist');",
+              "err": {},
+              "uuid": "545e65cc-ce27-43fe-9900-2ed21f1b3590",
+              "parentUUID": "21504336-5abb-4462-a5be-379d13b9d0f3",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "545e65cc-ce27-43fe-9900-2ed21f1b3590"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 6159,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": true,
+        "json": true,
+        "specPattern": "cypress/e2e/**/*.cy.js"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

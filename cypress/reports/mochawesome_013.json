@@ -1,0 +1,109 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2025-05-09T15:22:11.348Z",
+    "end": "2025-05-09T15:22:11.703Z",
+    "duration": 355,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "71a84fa7-4a8c-4259-81c0-749e16be2b63",
+      "title": "",
+      "fullFile": "cypress\\e2e\\10-senhaFraca.cy.js",
+      "file": "cypress\\e2e\\10-senhaFraca.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "81d4a203-59fa-4866-9e4c-32da8659fb38",
+          "title": "Desafio 7 - Senha fraca no cadastro de usuário",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Deve impedir criação de usuário com senha fraca",
+              "fullTitle": "Desafio 7 - Senha fraca no cadastro de usuário Deve impedir criação de usuário com senha fraca",
+              "timedOut": null,
+              "duration": 281,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('input[placeholder=\"Type for hints...\"]').type('Linda Anderson');\ncy.contains('Linda Anderson').click();\ncy.get('input[autocomplete=\"off\"]').eq(1).type('testuser123');\ncy.get('input[type=\"password\"]').eq(0).type('123'); // Senha fraca\ncy.get('input[type=\"password\"]').eq(1).type('123');\ncy.get('button[type=\"submit\"]').click();\ncy.contains('Should have at least').should('exist'); // ou texto de erro correspondente",
+              "err": {
+                "message": "TypeError: cy.login is not a function\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `Desafio 7 - Senha fraca no ...`",
+                "estack": "TypeError: cy.login is not a function\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `Desafio 7 - Senha fraca no ...`\n    at Context.eval (webpack://aut_1/./cypress/e2e/10-senhaFraca.cy.js:3:7)\n    at runnable.fn (https://opensource-demo.orangehrmlive.com/__cypress/runner/cypress_runner.js:140440:19)\n    at callFn (https://opensource-demo.orangehrmlive.com/__cypress/runner/cypress_runner.js:159518:21)\n    at Runnable.run (https://opensource-demo.orangehrmlive.com/__cypress/runner/cypress_runner.js:159505:7)\n    at <unknown> (https://opensource-demo.orangehrmlive.com/__cypress/runner/cypress_runner.js:165577:30)\n    at PassThroughHandlerContext.finallyHandler (https://opensource-demo.orangehrmlive.com/__cypress/runner/cypress_runner.js:4042:23)\n    at PassThroughHandlerContext.tryCatcher (https://opensource-demo.orangehrmlive.com/__cypress/runner/cypress_runner.js:1777:23)\n    at Promise._settlePromiseFromHandler (https://opensource-demo.orangehrmlive.com/__cypress/runner/cypress_runner.js:1489:31)\n    at Promise._settlePromise (https://opensource-demo.orangehrmlive.com/__cypress/runner/cypress_runner.js:1546:18)",
+                "diff": null
+              },
+              "uuid": "d5f76116-65fe-49b9-a38b-07015419df91",
+              "parentUUID": "81d4a203-59fa-4866-9e4c-32da8659fb38",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "d5f76116-65fe-49b9-a38b-07015419df91"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 281,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

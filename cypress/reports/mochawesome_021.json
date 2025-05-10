@@ -1,0 +1,148 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 3,
+    "passes": 2,
+    "pending": 0,
+    "failures": 1,
+    "start": "2025-05-09T15:23:26.263Z",
+    "end": "2025-05-09T15:23:32.107Z",
+    "duration": 5844,
+    "testsRegistered": 3,
+    "passPercent": 66.66666666666666,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "620499a7-c7e6-48c2-b841-b86df2286cf2",
+      "title": "",
+      "fullFile": "cypress\\e2e\\9-responsividadeLogin.cy.js",
+      "file": "cypress\\e2e\\9-responsividadeLogin.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "6b4f5a17-de79-417e-b13b-563a1f9e721b",
+          "title": "Desafio 8 - Responsividade do login",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Deve funcionar corretamente em iphone-6",
+              "fullTitle": "Desafio 8 - Responsividade do login Deve funcionar corretamente em iphone-6",
+              "timedOut": null,
+              "duration": 3024,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.viewport(view);\ncy.visit('/web/index.php/auth/login');\ncy.get('input[name=\"username\"]').type('Admin');\ncy.get('input[name=\"password\"]').type('admin123');\ncy.get('button[type=\"submit\"]').click();\ncy.contains('Dashboard').should('exist');",
+              "err": {},
+              "uuid": "0e86fe57-4d72-4654-85e4-d4f4cfc07b5c",
+              "parentUUID": "6b4f5a17-de79-417e-b13b-563a1f9e721b",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Deve funcionar corretamente em ipad-2",
+              "fullTitle": "Desafio 8 - Responsividade do login Deve funcionar corretamente em ipad-2",
+              "timedOut": null,
+              "duration": 2539,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.viewport(view);\ncy.visit('/web/index.php/auth/login');\ncy.get('input[name=\"username\"]').type('Admin');\ncy.get('input[name=\"password\"]').type('admin123');\ncy.get('button[type=\"submit\"]').click();\ncy.contains('Dashboard').should('exist');",
+              "err": {},
+              "uuid": "ed0c2535-891f-46c9-994f-396fa6821051",
+              "parentUUID": "6b4f5a17-de79-417e-b13b-563a1f9e721b",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Deve funcionar corretamente em 1024,768",
+              "fullTitle": "Desafio 8 - Responsividade do login Deve funcionar corretamente em 1024,768",
+              "timedOut": null,
+              "duration": 157,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.viewport(view);\ncy.visit('/web/index.php/auth/login');\ncy.get('input[name=\"username\"]').type('Admin');\ncy.get('input[name=\"password\"]').type('admin123');\ncy.get('button[type=\"submit\"]').click();\ncy.contains('Dashboard').should('exist');",
+              "err": {
+                "message": "CypressError: `cy.viewport()` can only accept a string preset or a `width` and `height` as numbers.\n\nhttps://on.cypress.io/viewport",
+                "estack": "CypressError: `cy.viewport()` can only accept a string preset or a `width` and `height` as numbers.\n\nhttps://on.cypress.io/viewport\n    at throwErrBadArgs (https://opensource-demo.orangehrmlive.com/__cypress/runner/cypress_runner.js:138001:77)\n    at Context.viewport (https://opensource-demo.orangehrmlive.com/__cypress/runner/cypress_runner.js:138068:9)\n    at wrapped (https://opensource-demo.orangehrmlive.com/__cypress/runner/cypress_runner.js:140165:43)\nFrom Your Spec Code:\n    at Context.eval (webpack://aut_1/./cypress/e2e/9-responsividadeLogin.cy.js:6:9)",
+                "diff": null
+              },
+              "uuid": "a3612c9d-05df-4a88-99f4-7123364647db",
+              "parentUUID": "6b4f5a17-de79-417e-b13b-563a1f9e721b",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "0e86fe57-4d72-4654-85e4-d4f4cfc07b5c",
+            "ed0c2535-891f-46c9-994f-396fa6821051"
+          ],
+          "failures": [
+            "a3612c9d-05df-4a88-99f4-7123364647db"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 5720,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

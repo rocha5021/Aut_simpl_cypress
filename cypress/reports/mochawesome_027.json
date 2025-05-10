@@ -1,0 +1,109 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2025-05-10T16:16:10.994Z",
+    "end": "2025-05-10T16:16:28.452Z",
+    "duration": 17458,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "efb3b4e9-1ec8-4745-b48d-0880e06ffcef",
+      "title": "",
+      "fullFile": "cypress\\e2e\\10-senhaFraca.cy.js",
+      "file": "cypress\\e2e\\10-senhaFraca.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "e8283a05-0131-4780-9e89-741e918a3e53",
+          "title": "Desafio 7 - Senha fraca no cadastro de usuário",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Deve impedir criação de usuário com senha fraca",
+              "fullTitle": "Desafio 7 - Senha fraca no cadastro de usuário Deve impedir criação de usuário com senha fraca",
+              "timedOut": null,
+              "duration": 17375,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('input[placeholder=\"Type for hints...\"]').type('manda user');\ncy.contains('manda user', {\n  timeout: 10000\n}).should('be.visible').click();\n// Aguarda o elemento existir e estar visível antes de interagir\ncy.get('label').contains('Username') // ou o label correspondente\n.parent().find('input').should('be.visible').type('Admin');\ncy.get('input[type=\"password\"]').eq(0).type('123'); // Senha fraca\ncy.get('input[type=\"password\"]').eq(1).type('123');\ncy.get('button[type=\"submit\"]').click();\ncy.contains('Should have at least').should('exist'); // ou texto de erro correspondente",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 10000ms: Expected to find content: 'manda user' but never did.",
+                "estack": "AssertionError: Timed out retrying after 10000ms: Expected to find content: 'manda user' but never did.\n    at Context.eval (webpack://aut_1/./cypress/e2e/10-senhaFraca.cy.js:10:50)",
+                "diff": null
+              },
+              "uuid": "f2bb6006-6cd7-4393-881f-9e3a1afbcccd",
+              "parentUUID": "e8283a05-0131-4780-9e89-741e918a3e53",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "f2bb6006-6cd7-4393-881f-9e3a1afbcccd"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 17375,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

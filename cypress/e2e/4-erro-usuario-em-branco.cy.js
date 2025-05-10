@@ -1,4 +1,4 @@
-describe('Erro ao tentar criar usuário com nome em branco', () => {
+describe.only('Erro ao tentar criar usuário com nome em branco', () => {
   before(() => {
     cy.visit('https://opensource-demo.orangehrmlive.com');
     cy.get('input[name="username"]').type('Admin');
@@ -6,7 +6,7 @@ describe('Erro ao tentar criar usuário com nome em branco', () => {
     cy.get('button[type="submit"]').click();
   });
 
-  it('Deve mostrar erro ao tentar criar usuário com nome em branco', () => {
+  it.only('Deve mostrar erro ao tentar criar usuário com nome em branco', () => {
     cy.get('span').contains('Admin').click();
     cy.contains('Add').click();
 

@@ -1,0 +1,109 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2025-05-09T15:23:19.397Z",
+    "end": "2025-05-09T15:23:19.590Z",
+    "duration": 193,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "5fc86b94-b5f4-4820-bd65-de152aec4d91",
+      "title": "",
+      "fullFile": "cypress\\e2e\\7-filtroUsuarios.cy.js",
+      "file": "cypress\\e2e\\7-filtroUsuarios.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "a9509475-4da3-4bad-9eb4-9e3ef8942c1a",
+          "title": "Desafio 6 - Filtro de busca de usuários",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Deve filtrar usuários pelo campo User Role",
+              "fullTitle": "Desafio 6 - Filtro de busca de usuários Deve filtrar usuários pelo campo User Role",
+              "timedOut": null,
+              "duration": 142,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('div.oxd-select-text').eq(0).click(); // User Role\ncy.contains('Admin').click();\ncy.get('button[type=\"submit\"]').click();\ncy.get('.oxd-table-row').should('exist'); // Verifica se há resultados",
+              "err": {
+                "message": "TypeError: cy.login is not a function\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `Desafio 6 - Filtro de busca...`",
+                "estack": "TypeError: cy.login is not a function\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `Desafio 6 - Filtro de busca...`\n    at Context.eval (webpack://aut_1/./cypress/e2e/7-filtroUsuarios.cy.js:16:7)\n    at runnable.fn (https://opensource-demo.orangehrmlive.com/__cypress/runner/cypress_runner.js:140440:19)\n    at callFn (https://opensource-demo.orangehrmlive.com/__cypress/runner/cypress_runner.js:159518:21)\n    at Runnable.run (https://opensource-demo.orangehrmlive.com/__cypress/runner/cypress_runner.js:159505:7)\n    at <unknown> (https://opensource-demo.orangehrmlive.com/__cypress/runner/cypress_runner.js:165577:30)\n    at PassThroughHandlerContext.finallyHandler (https://opensource-demo.orangehrmlive.com/__cypress/runner/cypress_runner.js:4042:23)\n    at PassThroughHandlerContext.tryCatcher (https://opensource-demo.orangehrmlive.com/__cypress/runner/cypress_runner.js:1777:23)\n    at Promise._settlePromiseFromHandler (https://opensource-demo.orangehrmlive.com/__cypress/runner/cypress_runner.js:1489:31)\n    at Promise._settlePromise (https://opensource-demo.orangehrmlive.com/__cypress/runner/cypress_runner.js:1546:18)",
+                "diff": null
+              },
+              "uuid": "8f0e5ea9-2572-4bc3-924f-ed5f97066d0e",
+              "parentUUID": "a9509475-4da3-4bad-9eb4-9e3ef8942c1a",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "8f0e5ea9-2572-4bc3-924f-ed5f97066d0e"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 142,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

@@ -1,0 +1,109 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2025-05-09T16:02:37.024Z",
+    "end": "2025-05-09T16:02:53.596Z",
+    "duration": 16572,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "cabb7308-b315-4ebf-97ca-93585efb5852",
+      "title": "",
+      "fullFile": "cypress\\e2e\\10-senhaFraca.cy.js",
+      "file": "cypress\\e2e\\10-senhaFraca.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "d1dc91c6-fa19-461e-a9db-f0174f356f32",
+          "title": "Desafio 7 - Senha fraca no cadastro de usuário",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Deve impedir criação de usuário com senha fraca",
+              "fullTitle": "Desafio 7 - Senha fraca no cadastro de usuário Deve impedir criação de usuário com senha fraca",
+              "timedOut": null,
+              "duration": 16505,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('input[placeholder=\"Type for hints...\"]').type('manda user');\ncy.contains('manda user', {\n  timeout: 10000\n}).should('be.visible').click();\n// Aguarda o elemento existir e estar visível antes de interagir\ncy.get('input[autocomplete=\"off\"]', {\n  timeout: 10000\n}).should('exist').eq(1).type('testuser123');\ncy.get('input[type=\"password\"]').eq(0).type('123'); // Senha fraca\ncy.get('input[type=\"password\"]').eq(1).type('123');\ncy.get('button[type=\"submit\"]').click();\ncy.contains('Should have at least').should('exist'); // ou texto de erro correspondente",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 10000ms: Expected to find element: `input[autocomplete=\"off\"]`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 10000ms: Expected to find element: `input[autocomplete=\"off\"]`, but never found it.\n    at Context.eval (webpack://aut_1/./cypress/e2e/10-senhaFraca.cy.js:13:60)",
+                "diff": null
+              },
+              "uuid": "744c623b-cd7a-4f22-8c83-9413b0c42a09",
+              "parentUUID": "d1dc91c6-fa19-461e-a9db-f0174f356f32",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "744c623b-cd7a-4f22-8c83-9413b0c42a09"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 16505,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
