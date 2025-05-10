@@ -1,4 +1,4 @@
-describe('Desafio 9 - Login inválido', () => {
+describe('Login inválido', () => {
   it.only('Deve exibir mensagem de erro com usuário ou senha incorretos', () => {
     cy.visit('/web/index.php/auth/login');
 

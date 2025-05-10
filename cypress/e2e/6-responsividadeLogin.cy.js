@@ -1,4 +1,4 @@
-describe('Desafio 8 - Responsividade do login', () => {
+describe('Responsividade do login', () => {
   const viewports = ['iphone-6', 'ipad-2', [1024, 768]];
 
   viewports.forEach(view => {
