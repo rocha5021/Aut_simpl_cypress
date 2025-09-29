@@ -20,21 +20,19 @@ describe('Erro ao tentar criar usuário com nome em branco', () => {
     cy.url().should('include', 'admin/viewSystemUsers');
     cy.wait(2000);
     cy.contains('Add').click();
-cy.wait(2000);
-    // Tentando salvar sem preencher campos obrigatórios
+    cy.wait(2000);
     cy.contains('Save').click();
-cy.wait(2000);
+    cy.wait(2000);
+
     // Valida mensagens de erro nos campos obrigatórios
     cy.get('.oxd-input-group__message').should('contain', 'Required');
     cy.wait(2000);
-    cy.get('.oxd-input-group__message').should('have.length.greaterThan', 0); // Garante que há mais de um campo obrigatório
+    cy.get('.oxd-input-group__message').should('have.length.greaterThan', 0); // há mais de um campo obrigatório
     cy.wait(2000);
     cy.screenshot('Required')
 
     // Logout
     UserPage.logout();
-
-    // Valida logout
     cy.url().should('include', '/auth/login');
     cy.get('button[type="submit"]').should('be.visible');
   });

@@ -15,15 +15,15 @@ describe('Login, menus e logout - OrangeHRM', () => {
     cy.url().should('include', '/dashboard');
     cy.contains('h6', 'Dashboard').should('be.visible');
 
-    // Verifica e clica em Performance
+    //Performance
     cy.contains('span', 'Performance').should('be.visible').click();
     cy.url().should('include', '/performance');
 
-    // Verifica e clica em PIM
+    //PIM
     cy.contains('span', 'PIM').should('be.visible').click();
     cy.url().should('include', '/pim');
 
-    // Verifica e clica em Claim
+    //Claim
     cy.contains('span', 'Claim').should('be.visible').click();
     cy.url().should('include', '/claim');
 

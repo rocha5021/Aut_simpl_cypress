@@ -17,6 +17,10 @@ module.exports = defineConfig({
 
   },
 
-
-
 });
+
+module.exports = defineConfig({
+  video: true,
+  screenshotOnRunFailure: true,
+});
+

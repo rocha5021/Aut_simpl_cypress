@@ -24,14 +24,12 @@ describe('Validação da lista de usuários - OrangeHRM', () => {
     cy.get('.oxd-table-body .oxd-table-row').should('have.length.greaterThan', 0); // Garante que há usuários na lista
     cy.wait(2000);
 
-     // Rola até o fim da tabela de usuários
+     // Rola até o fim
     cy.get('.oxd-table-body .oxd-table-row').last().scrollIntoView();
-    cy.wait(1000); // opcional: pequena pausa para visualizar o scroll
+    cy.wait(1000); // pequena pausa para visualizar o scroll
 
     // Logout
         UserPage.logout();
-    
-        // Valida logout
         cy.url().should('include', '/auth/login');
         cy.get('button[type="submit"]').should('be.visible');
   });
