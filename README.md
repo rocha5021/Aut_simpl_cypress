@@ -1,80 +1,148 @@
-
-
-# 🧪 Projeto de Automação com Cypress - OrangeHRM
-
-Este projeto tem como objetivo demonstrar a automação de testes end-to-end utilizando o **Cypress**, aplicada à plataforma de gestão de RH **OrangeHRM**. Os testes abrangem cenários críticos como login, navegação no dashboard, criação e exclusão de usuários, além da validação de mensagens de erro.
+Perfeito 🚀
+Segue abaixo um **README.md finalizado** já estruturado e pronto para você colocar no **GitHub** do projeto de automação Cypress (OrangeHRM).
 
 ---
 
-## 🚀 Tecnologias Utilizadas
+# Projeto de Automação E2E com Cypress – OrangeHRM
 
-- **Cypress** – Framework de testes E2E
-- **Mochawesome** – Geração de relatórios em HTML e JSON
+## 📌 Visão Geral
+
+Este projeto foi desenvolvido para demonstrar um **fluxo end-to-end (E2E)** de automação utilizando **Cypress** no sistema **OrangeHRM**.
+O objetivo principal é validar os fluxos críticos do sistema (login, administração de usuários, criação/exclusão e validações de erro), garantindo **qualidade, confiabilidade e manutenção simples**.
+
+---
+
+## 🎯 Objetivos da Automação
+
+* Validar o **login** de usuários.
+* Garantir a **navegação e visualização da lista de usuários**.
+* Automatizar o **fluxo de criação de usuário**.
+* Validar **mensagens de erro** ao tentar salvar sem campos obrigatórios.
+* Testar o fluxo de **exclusão de usuários**.
+* Gerar **relatórios automáticos** de execução.
+
+---
+
+## 🛠️ Tecnologias Utilizadas
+
+* **[Cypress](https://www.cypress.io/)** → Automação E2E web.
+* **Node.js** + **npm** → Gerenciamento de dependências.
+* **Mochawesome** → Geração de relatórios.
+* **Page Object Model (POM)** → Organização do código.
 
 ---
 
 ## 📂 Estrutura do Projeto
 
-Auto_cypress_exemplo/
-├── cypress/
-│ ├── e2e/ # Casos de teste automatizados
-│ │ └── orangeHRM.cy.js
-│ ├── reports/ # Relatórios gerados automaticamente
-│ └── support/ # Suporte com Page Objects
-│ └── pages/
-│ ├── LoginPage.js
-│ └── UserPage.js
-├── cypress.config.js # Configurações do Cypress
-├── package.json # Dependências e scripts
-└── README.md # Documentação do projeto
-
-
----
-
-## 🧪 Cenários Automatizados
-
-- ✅ Login e Logout
-- ✅ Navegação até a aba "Admin" e validação da lista de usuários
-- ✅ Criação e exclusão de usuários
-- ✅ Validação de erro ao tentar criar um usuário com campo obrigatório em branco
+```bash
+cypress/
+ ├── e2e/             # Casos de teste organizados por fluxo
+ │    └── user.cy.js
+ ├── pages/           # Page Objects (seletores + ações)
+ │    └── LoginPage.js
+ │    └── UserPage.js
+ ├── fixtures/        # Massa de dados (usuários, credenciais etc.)
+ │    └── users.json
+ ├── reports/         # Relatórios de execução (Mochawesome)
+ └── support/         # Configurações globais + comandos customizados
+```
 
 ---
 
-## ⚙️ Configuração do Cypress
+## ▶️ Como Executar
 
-### Instalação
+### 1. Clonar o projeto
+
+```bash
+git clone https://github.com/usuario/orangehrm-cypress.git
+cd orangehrm-cypress
+```
+
+### 2. Instalar dependências
 
 ```bash
 npm install
+```
 
-Execução dos Testes
+### 3. Executar os testes
 
+* **Modo interativo (debug)**
 
-npx cypress open      # Abre a interface interativa do Cypress
-npx cypress run       # Executa os testes em modo headless
+```bash
+npx cypress open
+```
 
-📊 Relatórios com Mochawesome
+* **Modo headless (CI/CD)**
 
-O projeto está configurado para gerar relatórios automáticos com o Mochawesome em formato HTML e JSON, disponíveis no diretório cypress/reports.
-Trecho de configuração no cypress.config.js:
+```bash
+npx cypress run
+```
 
-reporter: "mochawesome",
-reporterOptions: {
-  reportDir: "cypress/reports",
-  overwrite: false,
-  html: true,
-  json: true,
-}
+### 4. Relatórios
 
-📌 Requisitos
+Após a execução, relatórios HTML são gerados automaticamente em:
 
-    Node.js v14 ou superior
+```
+cypress/reports/
+```
 
-    NPM (Node Package Manager)
+---
 
-🤝 Contribuição
+## 📑 Estrutura dos Testes
 
-Pull requests são bem-vindos. Para mudanças maiores, abra uma issue para discutirmos o que você gostaria de modificar.
-📬 Contato
+### Fluxo End-to-End coberto
 
-Caso tenha dúvidas ou queira trocar ideias sobre QA e automação de testes, fique à vontade para entrar em contato via LinkedIn ou abrir uma issue neste repositório.
+1. Acessar a página de login.
+2. Realizar autenticação.
+3. Navegar até o módulo de **Admin > Users**.
+4. Criar um novo usuário e validar que ele foi incluído.
+5. Tentar criar usuário sem campo obrigatório → validar mensagem de erro.
+6. Excluir o usuário criado.
+7. Realizar logout.
+
+Cada teste contém **checkpoints claros com assertions**, garantindo que erros sejam identificados no ponto exato de falha.
+
+---
+
+## 🔍 Como Bugs são Investigados
+
+* Rodar o teste em **modo interativo**.
+* Verificar **logs, screenshots e vídeos** gerados automaticamente pelo Cypress.
+* Isolar o teste problemático.
+* Revisar **seletores** e usar atributos estáveis (`data-*` sempre que possível).
+* Validar sincronização com **cy.intercept()** para evitar flakiness.
+* Corrigir e reexecutar no CI.
+
+---
+
+## 📊 Boas Práticas Aplicadas
+
+* **Page Object Model (POM)** para separar lógica e seletores.
+* **Fixtures** para manter dados externos organizados.
+* **Testes idempotentes** → criam e removem dados no mesmo fluxo.
+* **Relatórios automáticos** para auditoria.
+* **Integração com CI/CD** para rodar os testes em cada build.
+
+---
+
+## 🚀 Possíveis Melhorias Futuras
+
+* Execução paralela via Cypress Dashboard.
+* Testes de API independentes com `cy.request()`.
+* Tagging de cenários (smoke, regression, critical).
+* Monitoramento de flakiness com retry automático.
+
+---
+
+## ✍️ Autor
+
+👨‍💻 **Marcus Vinicius Silva da Rocha**
+📍 Salvador – Bahia
+
+---
+
+👉 Esse README está pronto para colocar no **GitHub** e usar tanto em **entrevistas** quanto em **apresentações**.
+
+---
+
+Quer que eu já **gere esse README.md em arquivo** formatado para você baixar e só subir no repositório, ou prefere apenas copiar/colar direto no GitHub?
