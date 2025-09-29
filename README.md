@@ -1,14 +1,14 @@
----
 
-# Projeto de Automação E2E com Cypress – OrangeHRM
 
-## 📌 Visão Geral
+# Automação E2E com Cypress – OrangeHRM
+
+##  Visão Geral
 
 Este projeto automatiza os principais fluxos do sistema **OrangeHRM** usando **Cypress**, garantindo qualidade, confiabilidade e fácil manutenção. Os testes cobrem login, administração de usuários, validações de erro e responsividade.
 
 ---
 
-## 🎯 Objetivos da Automação
+##  Objetivos da Automação
 
 * Validar o **login** de usuários (sucesso e erro).
 * Garantir a **visualização da lista de usuários**.
@@ -18,7 +18,7 @@ Este projeto automatiza os principais fluxos do sistema **OrangeHRM** usando **C
 
 ---
 
-## 🛠️ Tecnologias Utilizadas
+## Tecnologias Utilizadas
 
 * **[Cypress](https://www.cypress.io/)** – Automação E2E web.
 * **Node.js** + **npm** – Gerenciamento de dependências.
@@ -27,7 +27,7 @@ Este projeto automatiza os principais fluxos do sistema **OrangeHRM** usando **C
 
 ---
 
-## 📂 Estrutura do Projeto
+## Estrutura do Projeto
 
 ```bash
 cypress/
@@ -46,7 +46,7 @@ cypress/
 
 ---
 
-## ▶️ Como Executar
+## Como Executar
 
 ### 1. Clonar o projeto
 
@@ -85,7 +85,7 @@ cypress/reports/
 
 ---
 
-## 📑 Fluxos Cobertos
+## Fluxos Cobertos
 
 - Login válido e inválido
 - Logout
@@ -95,29 +95,5 @@ cypress/reports/
 
 Todos os testes possuem asserts claros, tratamento de exceções e evidências (screenshots).
 
----
 
-## 📊 Boas Práticas Aplicadas
-
-* Padronização dos testes e tratamento de exceções.
-* Uso de asserts claros para garantir resultados.
-* Testes idempotentes e independentes.
-* Relatórios automáticos para auditoria.
-* Estrutura organizada para fácil manutenção.
-
----
-
-## 🚀 Melhorias Futuras
-
-* Comandos customizados para login e navegação.
-* Execução paralela via Cypress Dashboard.
-* Testes de API com `cy.request()`.
-* Tagging de cenários (smoke, regression, critical).
-
----
-
-## ✍️ Autor
-
-👨‍💻 **Marcus Vinicius Silva da Rocha**  
-📍 Salvador
 
