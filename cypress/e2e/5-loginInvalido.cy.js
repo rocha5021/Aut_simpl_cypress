@@ -1,17 +1,25 @@
+import LoginPage from '../Pages/LoginPage';
+import UserPage from '../Pages/UserPage';
+
 describe('Login inválido', () => {
-  it.only('Deve exibir mensagem de erro com usuário ou senha incorretos', () => {
-    cy.visit('/web/index.php/auth/login');
+  beforeEach(() => {
+    cy.visit('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login');
+    cy.on('uncaught:exception', (err, runnable) => {
+      return false;
+    });
+  });
 
-    cy.get('input[name="username"]').type('usuarioInvalido');
-    cy.get('input[name="password"]').type('senhaInvalida');
+  it('Deve exibir mensagem de erro com usuário ou senha incorretos', () => {
+    cy.get('input[name="username"]').type('Qadanasa');
+    cy.wait(2000);
+    cy.get('input[name="password"]').type('40028922');
+    cy.wait(2000);
     cy.get('button[type="submit"]').click();
-
-    // Aguarda a mensagem de erro aparecer
+    cy.wait(2000);
     cy.contains('Invalid credentials', { timeout: 5000 }).should('be.visible');
+    cy.wait(2000);
     cy.url().should('include', '/auth/login');
-
-    // Tira um print da tela
+    cy.wait(2000);
     cy.screenshot('login-invalido');
-    
   });
 });

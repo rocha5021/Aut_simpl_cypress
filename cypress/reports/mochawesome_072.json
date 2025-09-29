@@ -1,0 +1,144 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 3,
+    "passes": 3,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-09-29T15:20:27.071Z",
+    "end": "2025-09-29T15:20:39.428Z",
+    "duration": 12357,
+    "testsRegistered": 3,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "3e9d66c2-dacd-4d65-a146-eb92ea8e99e0",
+      "title": "",
+      "fullFile": "cypress\\e2e\\6-responsividadeLogin.cy.js",
+      "file": "cypress\\e2e\\6-responsividadeLogin.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "1e8de924-99df-488f-ad6a-b87463c68c55",
+          "title": "Responsividade do login",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Deve funcionar corretamente em iphone-6",
+              "fullTitle": "Responsividade do login Deve funcionar corretamente em iphone-6",
+              "timedOut": null,
+              "duration": 5050,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "if (Array.isArray(view)) {\n  cy.viewport(view[0], view[1]); // Define largura e altura separadamente\n} else {\n  cy.viewport(view); // Usa o preset de dispositivo\n}\ncy.visit('/web/index.php/auth/login');\ncy.get('input[name=\"username\"]').type('Admin');\ncy.get('input[name=\"password\"]').type('admin123');\ncy.get('button[type=\"submit\"]').click();\ncy.contains('Dashboard').should('exist');\n// Tira um print da tela\ncy.screenshot(`login-responsivo-${Array.isArray(view) ? view.join('x') : view}`);",
+              "err": {},
+              "uuid": "afbe7575-6bc2-45aa-b23c-c663371d53a7",
+              "parentUUID": "1e8de924-99df-488f-ad6a-b87463c68c55",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Deve funcionar corretamente em ipad-2",
+              "fullTitle": "Responsividade do login Deve funcionar corretamente em ipad-2",
+              "timedOut": null,
+              "duration": 3533,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "if (Array.isArray(view)) {\n  cy.viewport(view[0], view[1]); // Define largura e altura separadamente\n} else {\n  cy.viewport(view); // Usa o preset de dispositivo\n}\ncy.visit('/web/index.php/auth/login');\ncy.get('input[name=\"username\"]').type('Admin');\ncy.get('input[name=\"password\"]').type('admin123');\ncy.get('button[type=\"submit\"]').click();\ncy.contains('Dashboard').should('exist');\n// Tira um print da tela\ncy.screenshot(`login-responsivo-${Array.isArray(view) ? view.join('x') : view}`);",
+              "err": {},
+              "uuid": "4d086d6c-4937-4cd3-ba3e-62b0820c3ee6",
+              "parentUUID": "1e8de924-99df-488f-ad6a-b87463c68c55",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Deve funcionar corretamente em 1024x768",
+              "fullTitle": "Responsividade do login Deve funcionar corretamente em 1024x768",
+              "timedOut": null,
+              "duration": 3511,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "if (Array.isArray(view)) {\n  cy.viewport(view[0], view[1]); // Define largura e altura separadamente\n} else {\n  cy.viewport(view); // Usa o preset de dispositivo\n}\ncy.visit('/web/index.php/auth/login');\ncy.get('input[name=\"username\"]').type('Admin');\ncy.get('input[name=\"password\"]').type('admin123');\ncy.get('button[type=\"submit\"]').click();\ncy.contains('Dashboard').should('exist');\n// Tira um print da tela\ncy.screenshot(`login-responsivo-${Array.isArray(view) ? view.join('x') : view}`);",
+              "err": {},
+              "uuid": "1eecd594-3df5-41d0-baef-c927dc91afd1",
+              "parentUUID": "1e8de924-99df-488f-ad6a-b87463c68c55",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "afbe7575-6bc2-45aa-b23c-c663371d53a7",
+            "4d086d6c-4937-4cd3-ba3e-62b0820c3ee6",
+            "1eecd594-3df5-41d0-baef-c927dc91afd1"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 12094,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": true,
+        "json": true,
+        "specPattern": "cypress/e2e/**/*.cy.js"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

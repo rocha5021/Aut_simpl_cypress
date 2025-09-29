@@ -1,0 +1,144 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 3,
+    "passes": 3,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-09-29T17:03:13.054Z",
+    "end": "2025-09-29T17:03:26.973Z",
+    "duration": 13919,
+    "testsRegistered": 3,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "63aeaeef-6af6-4229-8535-bcd9191c891a",
+      "title": "",
+      "fullFile": "cypress\\e2e\\6-responsividadeLogin.cy.js",
+      "file": "cypress\\e2e\\6-responsividadeLogin.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "7ffb5898-d0bd-4f86-bf16-aeee6a4976f8",
+          "title": "Responsividade do login",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Deve funcionar corretamente em iphone-6",
+              "fullTitle": "Responsividade do login Deve funcionar corretamente em iphone-6",
+              "timedOut": null,
+              "duration": 5853,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "if (Array.isArray(view)) {\n  cy.viewport(view[0], view[1]); // Define largura e altura separadamente\n} else {\n  cy.viewport(view); // Usa o preset de dispositivo\n}\ncy.visit('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login');\ncy.get('input[name=\"username\"]').type('Admin');\ncy.get('input[name=\"password\"]').type('admin123');\ncy.get('button[type=\"submit\"]').click();\ncy.contains('Dashboard').should('exist');\n// Tira um print da tela\ncy.screenshot(`login-responsivo-${Array.isArray(view) ? view.join('x') : view}`);",
+              "err": {},
+              "uuid": "05aaf41f-4de2-430e-b86e-6d8852239701",
+              "parentUUID": "7ffb5898-d0bd-4f86-bf16-aeee6a4976f8",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Deve funcionar corretamente em ipad-2",
+              "fullTitle": "Responsividade do login Deve funcionar corretamente em ipad-2",
+              "timedOut": null,
+              "duration": 3982,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "if (Array.isArray(view)) {\n  cy.viewport(view[0], view[1]); // Define largura e altura separadamente\n} else {\n  cy.viewport(view); // Usa o preset de dispositivo\n}\ncy.visit('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login');\ncy.get('input[name=\"username\"]').type('Admin');\ncy.get('input[name=\"password\"]').type('admin123');\ncy.get('button[type=\"submit\"]').click();\ncy.contains('Dashboard').should('exist');\n// Tira um print da tela\ncy.screenshot(`login-responsivo-${Array.isArray(view) ? view.join('x') : view}`);",
+              "err": {},
+              "uuid": "89f1ad44-2899-4a10-9c95-d358c662af7e",
+              "parentUUID": "7ffb5898-d0bd-4f86-bf16-aeee6a4976f8",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Deve funcionar corretamente em 1024x768",
+              "fullTitle": "Responsividade do login Deve funcionar corretamente em 1024x768",
+              "timedOut": null,
+              "duration": 3688,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "if (Array.isArray(view)) {\n  cy.viewport(view[0], view[1]); // Define largura e altura separadamente\n} else {\n  cy.viewport(view); // Usa o preset de dispositivo\n}\ncy.visit('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login');\ncy.get('input[name=\"username\"]').type('Admin');\ncy.get('input[name=\"password\"]').type('admin123');\ncy.get('button[type=\"submit\"]').click();\ncy.contains('Dashboard').should('exist');\n// Tira um print da tela\ncy.screenshot(`login-responsivo-${Array.isArray(view) ? view.join('x') : view}`);",
+              "err": {},
+              "uuid": "62dd8615-c15f-48bb-bae8-85f185c7e954",
+              "parentUUID": "7ffb5898-d0bd-4f86-bf16-aeee6a4976f8",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "05aaf41f-4de2-430e-b86e-6d8852239701",
+            "89f1ad44-2899-4a10-9c95-d358c662af7e",
+            "62dd8615-c15f-48bb-bae8-85f185c7e954"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 13523,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": true,
+        "json": true,
+        "specPattern": "cypress/e2e/**/*.cy.js"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

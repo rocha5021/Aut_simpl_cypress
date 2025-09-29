@@ -1,0 +1,106 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-09-29T17:03:04.661Z",
+    "end": "2025-09-29T17:03:09.585Z",
+    "duration": 4924,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "d251b934-a19e-42ec-bb49-c728554a307f",
+      "title": "",
+      "fullFile": "cypress\\e2e\\5-loginInvalido.cy.js",
+      "file": "cypress\\e2e\\5-loginInvalido.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "697fb2fe-03e9-4292-94a8-45615d58e461",
+          "title": "Login inválido",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Deve exibir mensagem de erro com usuário ou senha incorretos",
+              "fullTitle": "Login inválido Deve exibir mensagem de erro com usuário ou senha incorretos",
+              "timedOut": null,
+              "duration": 4855,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('input[name=\"username\"]').type('usuarioInvalido');\ncy.get('input[name=\"password\"]').type('senhaInvalida');\ncy.get('button[type=\"submit\"]').click();\ncy.contains('Invalid credentials', {\n  timeout: 5000\n}).should('be.visible');\ncy.url().should('include', '/auth/login');\ncy.screenshot('login-invalido');",
+              "err": {},
+              "uuid": "657f80e7-8a72-4a35-9ac0-43e2a36576e6",
+              "parentUUID": "697fb2fe-03e9-4292-94a8-45615d58e461",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "657f80e7-8a72-4a35-9ac0-43e2a36576e6"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 4855,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": true,
+        "json": true,
+        "specPattern": "cypress/e2e/**/*.cy.js"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

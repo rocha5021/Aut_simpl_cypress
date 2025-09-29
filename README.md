@@ -1,34 +1,29 @@
-Perfeito 🚀
-Segue abaixo um **README.md finalizado** já estruturado e pronto para você colocar no **GitHub** do projeto de automação Cypress (OrangeHRM).
-
 ---
 
 # Projeto de Automação E2E com Cypress – OrangeHRM
 
 ## 📌 Visão Geral
 
-Este projeto foi desenvolvido para demonstrar um **fluxo end-to-end (E2E)** de automação utilizando **Cypress** no sistema **OrangeHRM**.
-O objetivo principal é validar os fluxos críticos do sistema (login, administração de usuários, criação/exclusão e validações de erro), garantindo **qualidade, confiabilidade e manutenção simples**.
+Este projeto automatiza os principais fluxos do sistema **OrangeHRM** usando **Cypress**, garantindo qualidade, confiabilidade e fácil manutenção. Os testes cobrem login, administração de usuários, validações de erro e responsividade.
 
 ---
 
 ## 🎯 Objetivos da Automação
 
-* Validar o **login** de usuários.
-* Garantir a **navegação e visualização da lista de usuários**.
-* Automatizar o **fluxo de criação de usuário**.
-* Validar **mensagens de erro** ao tentar salvar sem campos obrigatórios.
-* Testar o fluxo de **exclusão de usuários**.
+* Validar o **login** de usuários (sucesso e erro).
+* Garantir a **visualização da lista de usuários**.
+* Automatizar o **fluxo de criação de usuário** e validação de campos obrigatórios.
+* Testar o **logout** e a responsividade do login.
 * Gerar **relatórios automáticos** de execução.
 
 ---
 
 ## 🛠️ Tecnologias Utilizadas
 
-* **[Cypress](https://www.cypress.io/)** → Automação E2E web.
-* **Node.js** + **npm** → Gerenciamento de dependências.
-* **Mochawesome** → Geração de relatórios.
-* **Page Object Model (POM)** → Organização do código.
+* **[Cypress](https://www.cypress.io/)** – Automação E2E web.
+* **Node.js** + **npm** – Gerenciamento de dependências.
+* **Mochawesome** – Relatórios automáticos.
+* **Page Object Model (POM)** – Organização do código.
 
 ---
 
@@ -37,12 +32,14 @@ O objetivo principal é validar os fluxos críticos do sistema (login, administr
 ```bash
 cypress/
  ├── e2e/             # Casos de teste organizados por fluxo
- │    └── user.cy.js
+ │    ├── 1-login.cy.js
+ │    ├── 2-login_logout.cy.js
+ │    ├── 3-validar-lista-usuarios.cy.js
+ │    ├── 4-erro-usuario-em-branco.cy.js
+ │    ├── 5-loginInvalido.cy.js
+ │    └── 6-responsividadeLogin.cy.js
  ├── pages/           # Page Objects (seletores + ações)
- │    └── LoginPage.js
- │    └── UserPage.js
  ├── fixtures/        # Massa de dados (usuários, credenciais etc.)
- │    └── users.json
  ├── reports/         # Relatórios de execução (Mochawesome)
  └── support/         # Configurações globais + comandos customizados
 ```
@@ -88,54 +85,39 @@ cypress/reports/
 
 ---
 
-## 📑 Estrutura dos Testes
+## 📑 Fluxos Cobertos
 
-### Fluxo End-to-End coberto
+- Login válido e inválido
+- Logout
+- Validação da lista de usuários
+- Criação de usuário com campos obrigatórios em branco
+- Responsividade do login em diferentes dispositivos
 
-1. Acessar a página de login.
-2. Realizar autenticação.
-3. Navegar até o módulo de **Admin > Users**.
-4. Criar um novo usuário e validar que ele foi incluído.
-5. Tentar criar usuário sem campo obrigatório → validar mensagem de erro.
-6. Excluir o usuário criado.
-7. Realizar logout.
-
-Cada teste contém **checkpoints claros com assertions**, garantindo que erros sejam identificados no ponto exato de falha.
-
----
-
-## 🔍 Como Bugs são Investigados
-
-* Rodar o teste em **modo interativo**.
-* Verificar **logs, screenshots e vídeos** gerados automaticamente pelo Cypress.
-* Isolar o teste problemático.
-* Revisar **seletores** e usar atributos estáveis (`data-*` sempre que possível).
-* Validar sincronização com **cy.intercept()** para evitar flakiness.
-* Corrigir e reexecutar no CI.
+Todos os testes possuem asserts claros, tratamento de exceções e evidências (screenshots).
 
 ---
 
 ## 📊 Boas Práticas Aplicadas
 
-* **Page Object Model (POM)** para separar lógica e seletores.
-* **Fixtures** para manter dados externos organizados.
-* **Testes idempotentes** → criam e removem dados no mesmo fluxo.
-* **Relatórios automáticos** para auditoria.
-* **Integração com CI/CD** para rodar os testes em cada build.
+* Padronização dos testes e tratamento de exceções.
+* Uso de asserts claros para garantir resultados.
+* Testes idempotentes e independentes.
+* Relatórios automáticos para auditoria.
+* Estrutura organizada para fácil manutenção.
 
 ---
 
-## 🚀 Possíveis Melhorias Futuras
+## 🚀 Melhorias Futuras
 
+* Comandos customizados para login e navegação.
 * Execução paralela via Cypress Dashboard.
-* Testes de API independentes com `cy.request()`.
+* Testes de API com `cy.request()`.
 * Tagging de cenários (smoke, regression, critical).
-* Monitoramento de flakiness com retry automático.
 
 ---
 
 ## ✍️ Autor
 
-👨‍💻 **Marcus Vinicius Silva da Rocha**
-📍 Salvador – Bahia
+👨‍💻 **Marcus Vinicius Silva da Rocha**  
+📍 Salvador
 

@@ -1,0 +1,106 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-09-29T18:54:28.145Z",
+    "end": "2025-09-29T18:54:50.719Z",
+    "duration": 22574,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "b4348adc-2c56-4268-99b4-2a40786c7788",
+      "title": "",
+      "fullFile": "cypress\\e2e\\4-erro-usuario-em-branco.cy.js",
+      "file": "cypress\\e2e\\4-erro-usuario-em-branco.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "234555ad-a7f4-4770-917a-e52e55a15032",
+          "title": "Erro ao tentar criar usuário com nome em branco",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Deve mostrar erro ao tentar criar usuário com nome em branco",
+              "fullTitle": "Erro ao tentar criar usuário com nome em branco Deve mostrar erro ao tentar criar usuário com nome em branco",
+              "timedOut": null,
+              "duration": 22518,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('span').contains('Admin').click();\ncy.wait(2000);\ncy.url().should('include', 'admin/viewSystemUsers');\ncy.wait(2000);\ncy.contains('Add').click();\ncy.wait(2000);\n// Tentando salvar sem preencher campos obrigatórios\ncy.contains('Save').click();\ncy.wait(2000);\n// Valida mensagens de erro nos campos obrigatórios\ncy.get('.oxd-input-group__message').should('contain', 'Required');\ncy.wait(2000);\ncy.get('.oxd-input-group__message').should('have.length.greaterThan', 0); // Garante que há mais de um campo obrigatório\ncy.wait(2000);\ncy.screenshot('Required');\n// Logout\n_UserPage.default.logout();\n// Valida logout\ncy.url().should('include', '/auth/login');\ncy.get('button[type=\"submit\"]').should('be.visible');",
+              "err": {},
+              "uuid": "aef6c7cc-4de4-4260-9557-0ab978c5d644",
+              "parentUUID": "234555ad-a7f4-4770-917a-e52e55a15032",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "aef6c7cc-4de4-4260-9557-0ab978c5d644"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 22518,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": true,
+        "json": true,
+        "specPattern": "cypress/e2e/**/*.cy.js"
+      },
+      "version": "6.2.0"
+    }
+  }
+}
