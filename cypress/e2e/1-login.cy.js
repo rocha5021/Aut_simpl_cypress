@@ -11,9 +11,9 @@ describe('Login no OrangeHRM', () => {
 
    it('Deve mostrar erro ao tentar logar sem preencher os campos', () => {
   LoginPage.visit();
-  LoginPage.login('Admin', 'admin123');
     cy.wait(2000);
   cy.get('button[type="submit"]').click();
+  cy.wait(2000);
   cy.get('.oxd-input-field-error-message').should('contain', 'Required').and('be.visible');
 
   cy.url().should('include', '/auth/login');
