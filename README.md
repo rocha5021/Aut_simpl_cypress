@@ -23,7 +23,7 @@ Este projeto automatiza os principais fluxos do sistema **OrangeHRM** usando **C
 * **Cypress**
 * **Node.js** + **npm**
 * **Mochawesome** – Relatórios automáticos
-* **Page Object Model (POM)**
+* **Page Object Model**
 
 ---
 
