@@ -139,10 +139,3 @@ Cada teste contém **checkpoints claros com assertions**, garantindo que erros s
 👨‍💻 **Marcus Vinicius Silva da Rocha**
 📍 Salvador – Bahia
 
----
-
-👉 Esse README está pronto para colocar no **GitHub** e usar tanto em **entrevistas** quanto em **apresentações**.
-
----
-
-Quer que eu já **gere esse README.md em arquivo** formatado para você baixar e só subir no repositório, ou prefere apenas copiar/colar direto no GitHub?
