@@ -1,5 +1,5 @@
 class LoginPage {
-  // Seletores atualizados para OrangeHRM demo
+  // Seletores atualizados OrangeHRM
   usernameInput = 'input[name="username"]';
   passwordInput = 'input[name="password"]';
   loginButton = 'button[type="submit"]';
